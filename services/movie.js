@@ -6,7 +6,7 @@ const fetchData = async(path,{query = ""} = {}) => {
     await delay(500);
       try {
         const res = await fetch(
-          `${BASE_URL}${path}?api_key=${process.env.THE_MOVIE_DB_API_KEY}&${query}`
+          `${BASE_URL}${path}?api_key=${process.env.TMDB_API_KEY}&${query}`
         );
         return res.json();
       } catch (error) {
