@@ -1,9 +1,9 @@
 const BASE_URL = 'https://api.themoviedb.org/3';
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 
 const fetchData = async(path,{query = ""} = {}) => {
-    await delay(500);
+
       try {
         const res = await fetch(
           `${BASE_URL}${path}?api_key=${process.env.TMDB_API_KEY}&${query}`

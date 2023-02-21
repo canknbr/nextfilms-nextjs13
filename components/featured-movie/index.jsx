@@ -16,19 +16,21 @@ function FeaturedMovie({ movie = {}, isCompact = true }) {
         {overview}
       </p>
       <div className={styles.actionButton}>
-        <Link href={`/movie/${movie.id}`} className={styles.playButton}>Play</Link>
+        <Link href={`/movie/${movie.id}`} className={styles.playButton}>
+          Play
+        </Link>
         <button className={styles.addButton}>
-            <FaPlus />
+          <FaPlus />
         </button>
       </div>
       <div className={styles.moviePoster}>
         <div className={styles.moviePosterOverlay}></div>
         <Image
-        unoptimized
-        fill
-        alt={title}
-        src={`https://image.tmdb.org/t/p/${poster_path}`}
-/>
+          unoptimized
+          fill
+          alt={title}
+          src={`https://image.tmdb.org/t/p/original${poster_path}`}
+        />
       </div>
     </div>
   );
